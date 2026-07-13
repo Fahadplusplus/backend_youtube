@@ -42,7 +42,7 @@ const registerUser = asyncHandler( async(req,res)=>{
 
 
 
-  const profilePicLocalPath = req.files?.profilePic?.[0]?.path;
+  const profilePicLocalPath = req.files?.profilePic[0]?.path;
 const coverImgLocalPath = req.files?.coverImage?.[0]?.path;
 
 
@@ -87,4 +87,8 @@ const coverImgLocalPath = req.files?.coverImage?.[0]?.path;
    
 })
 
-export {registerUser}
+const loginUser = asyncHandler( async( req , res ) =>{
+
+})
+
+export {registerUser,loginUser}
