@@ -12,12 +12,14 @@ const generateAccessAndRefreshTokens = async(userId) => {
     console.log(user);
     
      const accessToken = user.generateAccessToken()
+     
      const refreshToken = user.generateRefreashToken()
      console.log(accessToken,"asscess token");
 
      user.refreshToken = refreshToken
      await user.save({ validateBeforeSave: false })
      return{accessToken,refreshToken}
+     
       
    } catch (error) {
          console.log("TOKEN ERROR:", error);
